@@ -59,7 +59,7 @@ namespace :remote do
   task :create_symblink, :roles => :app do
     print "    creating symlinks to database.yml.\n"
     run "rm /export/tonyblack/knoops/current/config/database.yml && ln -s /export/conf/knoops/database.yml /export/tonyblack/knoops/current/config/database.yml"
-    run "rm /export/tonyblack/knoops/current/config/newrelic.yml && ln -s /export/conf/knoops/newrelic.yml /export/tonyblack/knoops/current/config/newrelic.yml"
+    run "ln -s /export/conf/knoops/newrelic.yml /export/tonyblack/knoops/current/config/newrelic.yml"
     run "rm /export/tonyblack/knoops/current/config/initializers/secret_token.rb && ln -s /export/conf/knoops/secret_token.rb /export/tonyblack/knoops/current/config/initializers/secret_token.rb"
     run "rm /export/tonyblack/knoops/current/config/environments/production.rb && ln -s /export/conf/knoops/production.rb /export/tonyblack/knoops/current/config/environments/production.rb"
   end

@@ -53,12 +53,10 @@ gem 'newrelic_rpm'
 group :development do
   gem "better_errors", ">= 0.6.0"
   gem "binding_of_caller"
-  gem "capistrano"
   gem 'rvm-capistrano'
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 2.0'
   gem 'rspec-rails', '~> 2.0'
 end
 

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Rian</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <script src="http:/code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http:/code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <style>
+     .draggable { display: inline; }
+     p { display: inline; padding: 3px; background: #fc264a; width: 70px; margin-right: 5px; }
+  </style>
+  <script>
+(function($){
+
+    $.fn.shuffle = function() {
+
+        var allElems = this.get(),
+            getRandom = function(max) {
+                return Math.floor(Math.random() * max);
+            },
+            shuffled = $.map(allElems, function(){
+                var random = getRandom(allElems.length),
+                    randEl = $(allElems[random]).clone(true)[0];
+                allElems.splice(random, 1);
+                return randEl;
+           });
+
+        this.each(function(i){
+            $(this).replaceWith($(shuffled[i]));
+        });
+
+        return $(shuffled);
+
+    };
+
+})(jQuery);
+
+  $(function() {
+    $('.draggable').shuffle();
+    $( ".draggable" ).draggable({ handle: "p" });
+  });
+
+  </script>
+</head>
+<body>
+
+<div class="draggable"><embed width="70" height="100" src="http://www.youtube.com/v/nb3lN1GyfFE?controls=0" type="application/x-shockwave-flash"></embed><p >Pak</p></div>
+<div class="draggable"><embed width="70" height="100" src="http://www.youtube.com/v/Ds0m_s8zIC0?controls=0" type="application/x-shockwave-flash"></embed><p ">Pak</p></div>
+<div class="draggable"><embed width="70" height="100" src="http://www.youtube.com/v/Zavf3WZTmrs?controls=0" type="application/x-shockwave-flash"></embed><p >Pak</p></div>
+<div class="draggable"><embed width="70" height="100" src="http://www.youtube.com/v/Bka6W_lWBE4?controls=0" type="application/x-shockwave-flash"></embed><p >Pak</p></div>
+<div class="draggable"><embed width="70" height="100" src="http://www.youtube.com/v/cVgIaXC4kCo?controls=0" type="application/x-shockwave-flash"></embed><p >Pak</p></div>
+<br>
+<div class="draggable"><embed width="70" height="100" src="http://www.youtube.com/v/c2fdGvrjtPM?controls=0" type="application/x-shockwave-flash"></embed><p >Pak</p></div>
+<div class="draggable"><embed width="70" height="100" src="http://www.youtube.com/v/rxAZPK9ewNk?controls=0" type="application/x-shockwave-flash"></embed><p >Pak</p></div>
+<div class="draggable"><embed width="70" height="100" src="http://www.youtube.com/v/j9jW89ZT_zw?controls=0" type="application/x-shockwave-flash"></embed><p >Pak</p></div>
+<div class="draggable"><embed width="70" height="100" src="http://www.youtube.com/v/EsetIIZdroY?controls=0" type="application/x-shockwave-flash"></embed><p >Pak</p></div>
+<div class="draggable"><embed width="70" height="100" src="http://www.youtube.com/v/jHkgYHs_hmY?controls=0" type="application/x-shockwave-flash"></embed><p >Pak</p></div>
+<br>
+<div class="draggable"><embed width="70" height="100" src="http://www.youtube.com/v/3GCakBoODOo?controls=0" type="application/x-shockwave-flash"></embed><p >Pak</p></div>
+<div class="draggable"><embed width="70" height="100" src="http://www.youtube.com/v/lRjxrZ1PamA?controls=0" type="application/x-shockwave-flash"></embed><p >Pak</p></div>
+<div class="draggable"><embed width="70" height="100" src="http://www.youtube.com/v/jC-9k29JEnA?controls=0" type="application/x-shockwave-flash"></embed><p >Pak</p></div>
+<div class="draggable"><embed width="70" height="100" src="http://www.youtube.com/v/Qasbn3PbT6U?controls=0" type="application/x-shockwave-flash"></embed><p >Pak</p></div>
+<div class="draggable"><embed width="70" height="100" src="http://www.youtube.com/v/crv3DoAaAjs?controls=0" type="application/x-shockwave-flash"></embed><p >Pak</p></div>
+<br>
+<div class="draggable"><embed width="70" height="100" src="http://www.youtube.com/v/Aj9Wp4Vpgrc?controls=0" type="application/x-shockwave-flash"></embed><p >Pak</p></div>
+<div class="draggable"><embed width="70" height="100" src="http://www.youtube.com/v/CKXdqSGJ1nk?controls=0" type="application/x-shockwave-flash"></embed><p >Pak</p></div>
+<div class="draggable"><embed width="70" height="100" src="http://www.youtube.com/v/PZgGvOY_sFA?controls=0" type="application/x-shockwave-flash"></embed><p >Pak</p></div>
+<div class="draggable"><embed width="70" height="100" src="http://www.youtube.com/v/jlut2CaDB-Y?controls=0" type="application/x-shockwave-flash"></embed><p >Pak</p></div>
+<div class="draggable"><embed width="70" height="100" src="http://www.youtube.com/v/2NN_JOU4EuQ?controls=0" type="application/x-shockwave-flash"></embed><p >Pak</p></div>
+</body>
+</html>
